@@ -36,6 +36,44 @@ Capa activca --> Menú contextual (botón derecho del ratón) --> Propiedades de
 3- Añadimos todos los campos a este tabulador
    - id == no editable
    - id_cuadro = Relación de valores
+   - farola_inicial = No editable -- Valor por defecto el código de la farola que conecta al inicio de la línea
+   - farola_final = No editable -- Valor por defecto el código de la farola que conecta al final de la línea
+   - longitud = No editable -- Valor por defecto, longitud de la línea con 2 decimales
 
 
 ![Formulario capa línea eléctrica](./Imagenes/Formulario_linea_electrica.png)
+
+
+### Farola incial
+```
+aggregate(
+   layer:='Farolas', 
+   aggregate:= 'concatenate', 
+   expression:= "id_farola", 
+   filter:= intersects(buffer(start_point(geometry(@parent)),0.01), $geometry) )
+```
+
+### Farola final
+```
+aggregate(
+   layer:='Farolas', 
+   aggregate:= 'concatenate', 
+   expression:= "id_farola", 
+   filter:= intersects(buffer(end_point(geometry(@parent)),0.01), $geometry) )
+```
+
+### Longitud
+```
+round($length , 2)
+```
+
+### id_cuadro
+Relación de valors utilizando la capa de cuadrod y el codi de cuadro como id y como valor
+
+Pero añadiremos un filtro, en la Epsilon
+```
+intersects( buffer($geometry, 200) ,  @current_geometry )
+```
+
+
+
