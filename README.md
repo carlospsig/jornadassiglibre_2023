@@ -13,6 +13,10 @@ En este taller vamos a ver diversas opciones para manejar el formulario de atrib
 5. Añadir condicionales 
 6. Mostrar una imágen
 
+#### Descargar este fichero zip con capas y fotos, descomprimirlo!!!!!
+https://github.com/carlospsig/jornadassiglibre_2023/blob/b4acab95c73cd4c3de84f5a1f91c36e4b54b4ecc/Taller_formularios.zip
+
+
 ## Primero abrimos un proyecto de QGIS preparado
 Cargar prpyecto de GeoPackage
 - Menú Proyecto --> Abrir Formulario --> GeoPacakge --> 
