@@ -26,7 +26,7 @@ Cargar prpyecto de GeoPackage
 ![Cargar proyecto QGIS de GeoPackage](./Imagenes/Cargar_proyecto_GPKG.png)
 
 
-## Diseño de arrastar y soltar
+## Diseño de arrastar y soltar Capa de linea eléctrica
 Vamos a las propiedades de la capa de linees electricas o tendido eléctrico
 
 Capa activca --> Menú contextual (botón derecho del ratón) --> Propiedades de la capa --> Formulario de atributos
@@ -75,5 +75,19 @@ Pero añadiremos un filtro, en la Epsilon
 intersects( buffer($geometry, 200) ,  @current_geometry )
 ```
 
+## Diseño de arrastar y soltar Capa de cuadros
+Vamos a las propiedades de la capa de linees electricas o tendido eléctrico
 
-
+1- Definimos el tipo de formulario como "Diseño de arrastrar y soltar
+2- Creamos un tabulador con nombre "Cuadro eléctrico"
+3- Añadimos todos los campos a este tabulador
+   - id == no editable
+   - contiene_foto == Booleano (verdadero/falso) con casilla de verficació
+   - Crear un contenedor para crear una condición de visualización según campo anterior
+      - nombre_foto == Editable, Tipo de control = Adjunto
+  
+  ![Formulario capa cuadros](./Imagenes/Formulario_cuadros.png)
+  
+  
+   ![Tipo de control Adjunto /Foto capa cuadros](./Imagenes/Tipo_control_foto.png)
+  
