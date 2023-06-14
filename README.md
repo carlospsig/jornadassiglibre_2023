@@ -21,9 +21,6 @@ https://github.com/carlospsig/jornadassiglibre_2023/blob/b4acab95c73cd4c3de84f5a
 
 ## Primero abrimos un proyecto de QGIS preparado
 Cargar prpyecto de GeoPackage
-- Menú Proyecto --> Abrir Formulario --> GeoPacakge --> 
-
-![Cargar proyecto QGIS de GeoPackage](./Imagenes/Cargar_proyecto_GPKG.png)
 
 
 ## Diseño de arrastar y soltar Capa de linea eléctrica
